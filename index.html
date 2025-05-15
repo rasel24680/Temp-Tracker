@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Updates</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherApp-wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.search button {
+  padding: 10px 15px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #008ecc;
+}
+
+.weather img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.city {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.col img {
+  width: 40px;
+}
+
+.humidity, .wind {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+  <div class="weatherApp-wrapper">
+    <div class="search">
+      <input type="text" id="searchBar" placeholder="Enter City Name" spellcheck="false"/>
+      <button>
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <div class="weather">
+      <img src="assets/images/atmospheric-conditions.png" alt="Weather Icon" />
+      <h1 class="temp">22°c</h1>
+      <h2 class="city">Dhaka</h2>
+
+      <div class="details">
+        <div class="col">
+          <img src="assets/images/weather.png" alt="Humidity Icon" />
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="assets/images/wind.png" alt="Wind Icon" />
+          <div>
+            <p class="wind">5 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
